@@ -5,16 +5,17 @@
     <!-- Required meta tags -->
     @include('admin.css')
     <style>
-        .div_center{
-        text-align: center;
-        padding-top: 20px;
+        .div_center {
+            /* text-align: center; */
+            padding-top: 20px;
         }
 
-        .h2{
-        padding-bottom: 20px;
-        
+        .h2 {
+            padding-bottom: 20px;
+
         }
-        </style>
+
+    </style>
 </head>
 
 <body>
@@ -27,18 +28,32 @@
         <div class="main-panel">
             <div class="content-wrapper">
 
+            @if(session()->has('message'))
+
+            <div class = "alert alert-success">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+
+                {{session()->get('message')}}
+
+            </div>
+
+            @endif
+            
                 <div class="div_center">
                     <h2 class="h2">New Registration</h2>
 
-                    <form>
-                        <label for="membership_id">Membership Id:</label>
-                        <input type="text" name="membership_id"><br>
-
+                    <form action="{{url('/add_client')}}" method="POST">
+                        
+                        @csrf
+                    
                         <label for="name">Name:</label>
                         <input type="name" name="name"><br>
 
                         <label for="gender">Gender:</label>
-                        <input type="drop" id="gender" name="gender"><br>
+                        <input type="radio" id="male" name="gender" value="HTML">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
 
                         <label for="birthday">Date of Birth:</label>
                         <input type="date" id="birthday" name="birthday"><br>
@@ -56,13 +71,16 @@
                         <input type="date" id="joindate" name="joindate"><br>
 
                         <label for="plan">Plan:</label>
-                        <select name="custom-select" id="inputGroupSelect01" placeholder="Select">
-                            <option selected>Select Plan</option>
+                        <input type="text" id="plan" name="customselect"><br>
+
+                        <!-- <label for="plan">Plan:</label>
+                        <select name="customselect" id="inputGroupSelect01">
+                            
                             <option value="pro">PRO</option>
                             <option value="premium">PREMIUM</option>
                             <option value="master">MASTER</option>
                             <option value="oneday">One-Day</option>
-                        </select><br>
+                        </select><br> -->
 
                         <input type="submit" class="btn btn-primary" name="submit" value="Submit">
                         <input type="reset" class="btn btn-primary" name="reset" value="Reset"><br>
