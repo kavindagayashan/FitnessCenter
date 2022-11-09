@@ -64,36 +64,44 @@
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
-          <!-- <li class="nav-item menu-items">
+          <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <span class="menu-icon">
                 <i class="mdi mdi-laptop"></i>
               </span>
-              <span class="menu-title">Members</span>
+              <span class="menu-title">Registration</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="{{url('new_registration')}}">New Registration</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Typography</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{url('new_registration')}}">Member Registration</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{url('staff_registration')}}">Staff Registration</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Equipment</a></li>
               </ul>
             </div>
-          </li> -->
-          <li class="nav-item menu-items">
+          </li>
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('new_registration')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-playlist-play"></i>
               </span>
               <span class="menu-title">New Registration</span>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/tables/basic-table.html">
+            <a class="nav-link" href="{{url('view_members')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-table-large"></i>
               </span>
               <span class="menu-title">Members</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('view_staff')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-table-large"></i>
+              </span>
+              <span class="menu-title">Staff</span>
             </a>
           </li>
           <li class="nav-item menu-items">

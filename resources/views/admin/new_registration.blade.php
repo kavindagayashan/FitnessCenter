@@ -8,6 +8,7 @@
         .div_center {
             /* text-align: center; */
             padding-top: 20px;
+            padding-top: 20px;
         }
 
         .h2 {
@@ -40,7 +41,7 @@
             @endif
             
                 <div class="div_center">
-                    <h2 class="h2">New Registration</h2>
+                    <h2 class="h2">New Member Registration</h2>
 
                     <form action="{{url('/add_client')}}" method="POST">
                         
@@ -50,9 +51,9 @@
                         <input type="name" name="name"><br>
 
                         <label for="gender">Gender:</label>
-                        <input type="radio" id="male" name="gender" value="HTML">
+                        <input type="radio" id="male" name="gender" value="Male">
                         <label for="male">Male</label>
-                        <input type="radio" id="female" name="gender" value="female">
+                        <input type="radio" id="female" name="gender" value="Female">
                         <label for="female">Female</label><br>
 
                         <label for="birthday">Date of Birth:</label>

@@ -38,3 +38,11 @@ route::get('/new_registration', [AdminController::class,'new_registration']);
 route::get('/product_details', [HomeController::class,'product_details']);
 
 route::post('/add_client', [AdminController::class,'add_client']);
+
+route::get('/view_members', [AdminController::class,'view_members']);
+
+route::get('/delete_member/{id}', [AdminController::class,'delete_member']);
+
+route::get('/staff_registration', [AdminController::class,'staff_registration']);
+
+route::post('/add_staff', [AdminController::class,'add_staff']);
