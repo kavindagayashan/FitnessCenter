@@ -46,3 +46,7 @@ route::get('/delete_member/{id}', [AdminController::class,'delete_member']);
 route::get('/staff_registration', [AdminController::class,'staff_registration']);
 
 route::post('/add_staff', [AdminController::class,'add_staff']);
+
+route::get('/view_staff', [AdminController::class,'view_staff']);
+
+route::get('/delete_staff/{id}', [AdminController::class,'delete_staff']);

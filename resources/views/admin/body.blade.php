@@ -8,7 +8,7 @@
                       <div class="col-4 col-sm-3 col-xl-2">
                         <img src="assets/images/dashboard/Group126@2x.png" class="gradient-corona-img img-fluid" alt="">
                       </div>
-                      <div class="col-5 col-sm-7 col-xl-8 p-0">
+                      <!-- <div class="col-5 col-sm-7 col-xl-8 p-0">
                         <h4 class="mb-1 mb-sm-0">Want even more features?</h4>
                         <p class="mb-0 font-weight-normal d-none d-sm-block">Check out our Pro version with 5 unique layouts!</p>
                       </div>
@@ -16,7 +16,7 @@
                         <span>
                           <a href="https://www.bootstrapdash.com/product/corona-admin-template/" target="_blank" class="btn btn-outline-light btn-rounded get-started-btn">Upgrade to PRO</a>
                         </span>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -29,7 +29,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">$12.34</h3>
+                          <h3 class="mb-0">250,000</h3>
                           <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
                         </div>
                       </div>
@@ -39,7 +39,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Potential growth</h6>
+                    <h6 class="text-muted font-weight-normal">Paid Income</h6>
                   </div>
                 </div>
               </div>
@@ -49,8 +49,8 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">$17.34</h3>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p>
+                          <h3 class="mb-0">125</h3>
+                          <p class="text-success ml-2 mb-0 font-weight-medium"></p>
                         </div>
                       </div>
                       <div class="col-3">
@@ -59,7 +59,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Revenue current</h6>
+                    <h6 class="text-muted font-weight-normal">Total Members</h6>
                   </div>
                 </div>
               </div>
@@ -69,7 +69,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">$12.34</h3>
+                          <h3 class="mb-0">12</h3>
                           <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
                         </div>
                       </div>
@@ -79,7 +79,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Daily Income</h6>
+                    <h6 class="text-muted font-weight-normal">Join This Month</h6>
                   </div>
                 </div>
               </div>
@@ -89,8 +89,8 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">$31.53</h3>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
+                          <h3 class="mb-0">10</h3>
+                          <p class="text-success ml-2 mb-0 font-weight-medium"></p>
                         </div>
                       </div>
                       <div class="col-3">
@@ -99,12 +99,12 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Expense current</h6>
+                    <h6 class="text-muted font-weight-normal">Total Plans</h6>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
@@ -232,8 +232,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
+            </div> -->
+            <!-- <div class="row">
               <div class="col-sm-4 grid-margin">
                 <div class="card">
                   <div class="card-body">
@@ -659,14 +659,14 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div>-->
+          </div> 
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © bootstrapdash.com 2020</span>
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">© 2021 All Rights Reserved By Future Fitness (Pvt) Ltd</span>
+              <!-- <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Free <a href="https://www.bootstrapdash.com/bootstrap-admin-template/" target="_blank">Bootstrap admin templates</a> from Bootstrapdash.com</span> -->
             </div>
           </footer>
           <!-- partial -->

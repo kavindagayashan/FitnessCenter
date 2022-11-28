@@ -12,8 +12,8 @@
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
-                  <span>Gold Member</span>
+                  <h5 class="mb-0 font-weight-normal">Dulshan Dananjaya</h5>
+                  <span>General Manager</span>
                 </div>
               </div>
               <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
@@ -117,7 +117,7 @@
               <span class="menu-icon">
                 <i class="mdi mdi-contacts"></i>
               </span>
-              <span class="menu-title">Icons</span>
+              <span class="menu-title">Plans</span>
             </a>
           </li>
           <li class="nav-item menu-items">
@@ -125,16 +125,16 @@
               <span class="menu-icon">
                 <i class="mdi mdi-security"></i>
               </span>
-              <span class="menu-title">User Pages</span>
+              <span class="menu-title">Payments</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> 1 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 3 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> 4 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> 5 </a></li>
               </ul>
             </div>
           </li>
@@ -143,7 +143,7 @@
               <span class="menu-icon">
                 <i class="mdi mdi-file-document-box"></i>
               </span>
-              <span class="menu-title">Documentation</span>
+              <span class="menu-title">Profile</span>
             </a>
           </li>
         </ul>

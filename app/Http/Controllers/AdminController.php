@@ -61,6 +61,18 @@ class AdminController extends Controller
         $data->Position = $request->position;
         $data->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('message','New Staff Added Successfully');
+    }
+
+    public function view_staff(){
+
+        $data = NewStaff::all();
+        return view('admin.staff', compact('data'));
+    }
+    public function delete_staff($id){
+        $data= NewStaff::find($id);
+
+        $data->delete();
+        return redirect()->back()->with('message','Staff Deleted Successfully');
     }
 }
