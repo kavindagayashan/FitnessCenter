@@ -6,16 +6,29 @@
     @include('admin.css')
     <style>
         .div_center {
-            /* text-align: center; */
+            text-align: center; 
             padding-top: 20px;
-            padding-top: 20px;
+            /* padding-top: 20px; */
+            text-align :center;
         }
 
         .h2 {
             padding-bottom: 20px;
-
+            /* padding-top: 20px; */
         }
 
+        label{
+            display: inline-block;
+            width: 100px;
+        }
+
+        .div_design{
+            padding-bottom:10px;
+        }
+
+       .sub_form{
+            padding-top :10px;
+        }
     </style>
 </head>
 
@@ -46,34 +59,41 @@
                     <form action="{{url('/add_client')}}" method="POST">
                         
                         @csrf
-                    
+                    <div class="div_design">
                         <label for="name">Name:</label>
-                        <input type="name" name="name"><br>
-
+                        <input type="name" name="name" required=""><br>
+                    </div>
+                    <div class="div_design">
                         <label for="gender">Gender:</label>
-                        <input type="radio" id="male" name="gender" value="Male">
+                        <input type="radio" id="male" name="gender" value="Male" required="">
                         <label for="male">Male</label>
-                        <input type="radio" id="female" name="gender" value="Female">
+                        <input type="radio" id="female" name="gender" value="Female" required="">
                         <label for="female">Female</label><br>
-
+                    </div>
+                    <div class="div_design">
                         <label for="birthday">Date of Birth:</label>
-                        <input type="date" id="birthday" name="birthday"><br>
-
+                        <input type="date" id="birthday" name="birthday" required=""><br>
+                    </div>
+                    <div class="div_design">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email"><br>
-
+                        <input type="email" id="email" name="email" required=""><br>
+                    </div>
+                    <div class="div_design">
                         <label for="address">Address:</label>
-                        <input type="textarea" id="address" name="address"><br>
-
+                        <input type="textarea" id="address" name="address" required=""><br>
+                    </div>
+                    <div class="div_design">
                         <label for="address">Phone:</label>
-                        <input type="number" id="phone" name="phone"><br>
-
+                        <input type="number" id="phone" name="phone" required=""><br>
+                    </div>
+                    <div class="div_design">
                         <label for="joindate">Join Date:</label>
-                        <input type="date" id="joindate" name="joindate"><br>
-
+                        <input type="date" id="joindate" name="joindate" required=""><br>
+                    </div>
+                    <div class="div_design">
                         <label for="plan">Plan:</label>
-                        <input type="text" id="plan" name="customselect"><br>
-
+                        <input type="text" id="plan" name="customselect" required=""><br>
+                    </div>
                         <!-- <label for="plan">Plan:</label>
                         <select name="customselect" id="inputGroupSelect01">
                             
@@ -82,10 +102,10 @@
                             <option value="master">MASTER</option>
                             <option value="oneday">One-Day</option>
                         </select><br> -->
-
+                    <div class="sub_form">
                         <input type="submit" class="btn btn-primary" name="submit" value="Submit">
                         <input type="reset" class="btn btn-primary" name="reset" value="Reset"><br>
-
+                    </div>
                     </form>
                 </div>
 

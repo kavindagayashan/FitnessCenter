@@ -3,6 +3,32 @@
   <head>
     <!-- Required meta tags -->
     @include('admin.css')
+    <style>
+      .div_center {
+            text-align: center; 
+            padding-top: 20px;
+            /* padding-top: 20px; */
+            text-align :center;
+        }
+
+        .h2 {
+            padding-bottom: 20px;
+            /* padding-top: 20px; */
+        }
+
+        /* label{
+            display: inline-block;
+            width: 100px;
+        } */
+
+        .div_design{
+            padding-bottom:8px;
+        }
+
+       .sub_form{
+            padding-top :10px;
+        }
+    </style>
   </head>
   <body>
     <div class="container-scroller">
@@ -31,58 +57,77 @@
                     <form action="{{url('/add_staff')}}" method="POST">
                         
                         @csrf
-                    
+                    <div class="div_design">
                         <label for="name">Full Name:</label>
-                        <input type="text" name="name"><br>
+                        <input type="text" name="name" required=""><br>
+                    </div>
 
+                    <div class="div_design">
                         <label for="gender">Gender:</label>
-                        <input type="radio" id="male" name="gender" value="Male">
+                        <input type="radio" id="male" name="gender" value="Male" required="">
                         <label for="male">Male</label>
-                        <input type="radio" id="female" name="gender" value="Female">
+                        <input type="radio" id="female" name="gender" value="Female" required="">
                         <label for="female">Female</label><br>
+                    </div>
 
+                    <div class="div_design">
                         <label for="birthday">Date of Birth:</label>
-                        <input type="date" id="birthday" name="birthday"><br>
+                        <input type="date" id="birthday" name="birthday" required=""><br>
+                        </div>
 
+                        <div class="div_design">
                         <label for="qualification">Qualification:</label>
-                        <input type="checkbox" id="degree" name="qualification[]" value="Degree">
+                        <input type="checkbox" id="degree" name="qualification[]" value="Degree" >
                         <label for="degree"> Degree</label>
-                        <input type="checkbox" id="diploma" name="qualification[]" value="Diploma">
+                        <input type="checkbox" id="diploma" name="qualification[]" value="Diploma" >
                         <label for="diploma"> Diploma</label>
-                        <input type="checkbox" id="cerificate" name="qualification[]" value="Cerificate">
+                        <input type="checkbox" id="cerificate" name="qualification[]" value="Cerificate" >
                         <label for="cerificate"> Cerificate</label>
-                        <input type="checkbox" id="following" name="qualification[]" value="Following">
+                        <input type="checkbox" id="following" name="qualification[]" value="Following" >
                         <label for="following"> Following</label><br>
+                        </div>
 
+                        <div class="div_design">
                         <label for="achievements">Achievements:</label>
-                        <input type="checkbox" id="district" name="achievements[]" value="World">
+                        <input type="checkbox" id="district" name="achievements[]" value="World" >
                         <label for="district"> World</label>
-                        <input type="checkbox" id="national" name="achievements[]" value="National">
+                        <input type="checkbox" id="national" name="achievements[]" value="National" >
                         <label for="national"> National</label>
                         <input type="checkbox" id="provincial" name="achievements[]" value="Provincial">
                         <label for="provincial"> Provincial</label>
-                        <input type="checkbox" id="district" name="achievements[]" value="District">
+                        <input type="checkbox" id="district" name="achievements[]" value="District" >
                         <label for="district"> District</label>
-                        <input type="checkbox" id="no" name="achievements[]" value="No">
+                        <input type="checkbox" id="no" name="achievements[]" value="No" >
                         <label for="no"> No</label><br>
+                        </div>
 
+                        <div class="div_design">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email"><br>
+                        <input type="email" id="email" name="email" required=""><br>
+                        </div>
 
+                        <div class="div_design">
                         <label for="address">Address:</label>
-                        <input type="textarea" id="address" name="address"><br>
+                        <input type="textarea" id="address" name="address" required=""><br>
+                        </div>
 
+                        <div class="div_design">
                         <label for="address">Phone:</label>
-                        <input type="number" id="phone" name="phone"><br>
+                        <input type="number" id="phone" name="phone" required=""><br>
+                        </div>
 
+                        <div class="div_design">
                         <label for="joindate">Join Date:</label>
-                        <input type="date" id="joindate" name="joindate"><br>
+                        <input type="date" id="joindate" name="joindate" required=""><br>
+                        </div>
 
+                        <div class="div_design">
                         <label for="position">Position:</label>
-                        <input type="radio" id="senior" name="position" value="Senior Fitness Instructor">
+                        <input type="radio" id="senior" name="position" value="Senior Fitness Instructor" required="">
                         <label for="senior"> Senior Fitness Instructor</label>
-                        <input type="radio" id="general" name="position" value="Fitness Instructor">
+                        <input type="radio" id="general" name="position" value="Fitness Instructor" required="">
                         <label for="general"> Fitness Instructor</label><br>
+                        </div>
                         <!-- <label for="cv">CV or Resume:</label>
                         <input type="file" id="myFile" name="filename"><br> -->
 
@@ -94,10 +139,10 @@
                             <option value="master">MASTER</option>
                             <option value="oneday">One-Day</option>
                         </select><br> -->
-
+                      <div class="sub_form">
                         <input type="submit" class="btn btn-primary" name="submit" value="Submit">
                         <input type="reset" class="btn btn-primary" name="reset" value="Reset"><br>
-
+                     </div>
                     </form>
                 </div>
 
