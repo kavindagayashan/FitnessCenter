@@ -107,4 +107,11 @@ class AdminController extends Controller
         $package = Package::all();
         return view('admin.show_package',compact('package'));
     }
+
+    public function delete_package($id){
+        $package=package::find($id);
+        $package->delete();
+
+        return redirect()->back()->with('message','Package Deleted Successfully');
+    }
 }

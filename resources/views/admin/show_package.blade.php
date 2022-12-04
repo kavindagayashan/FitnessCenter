@@ -39,6 +39,18 @@
 
         <div class="main-panel">
              <div class="content-wrapper">
+
+             @if(session()->has('message'))
+
+            <div class = "alert alert-success">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+
+                {{session()->get('message')}}
+
+            </div>
+
+            @endif
+            
            <h2 class="font_size">All Packages</h2>
              <table class="center">
                 <tr class ="th_color">
@@ -70,11 +82,12 @@
                     <td>
                         <img class="img_size" src="/package/{{$package->image}}">
                     </td>
-                    <td><a href=" Delete"></a></td>
-                    <td><a href=" Edit"></a></td>
+                    <td><a class="btn btn-danger" onclick="return confirm('Confirm the Delete Package')" href="{{url('delete_package', $package->id)}}">Delete</a></td>
+                    <td><a class="btn btn-success" href=" ">Edit</a></td>
                 </tr>
 
                 @endforeach
+
              </table>
             </div>
         </div>

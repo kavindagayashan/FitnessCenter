@@ -56,3 +56,5 @@ route::get('/view_package', [AdminController::class,'view_package']);
 route::post('/add_package', [AdminController::class,'add_package']);
 
 route::get('/show_package', [AdminController::class,'show_package']);
+
+route::get('/delete_package/{id}', [AdminController::class,'delete_package']);
