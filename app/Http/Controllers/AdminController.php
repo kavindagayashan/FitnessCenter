@@ -8,6 +8,8 @@ use App\Models\NewClient;
 
 use App\Models\NewStaff;
 
+use App\Models\Package;
+
 class AdminController extends Controller
 {
     public function new_registration(){
@@ -74,5 +76,22 @@ class AdminController extends Controller
 
         $data->delete();
         return redirect()->back()->with('message','Staff Deleted Successfully');
+    }
+
+    public function view_package(){
+        return view('admin.package');
+    }
+
+    public function add_package(Request $request ){
+        $package = new package;
+
+        $product->title = $request->title;
+        $product->description = $request->title;
+        $product->monthly = $request->title;
+        $product->3months = $request->title;
+        $product->title = $request->title;
+        $product->title = $request->title;
+        $product->title = $request->title;
+        $product->title = $request->title;
     }
 }
