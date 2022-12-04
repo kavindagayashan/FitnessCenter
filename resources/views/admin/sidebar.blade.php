@@ -80,6 +80,7 @@
               </ul>
             </div>
           </li>
+
           <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="{{url('new_registration')}}">
               <span class="menu-icon">
@@ -105,6 +106,22 @@
             </a>
           </li>
           <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <span class="menu-icon">
+                <i class="mdi mdi-contacts"></i>
+              </span>
+              <span class="menu-title">Packages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{url('/view_package')}}">Add Package</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">Show Packages</a></li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item menu-items">
             <a class="nav-link" href="pages/charts/chartjs.html">
               <span class="menu-icon">
                 <i class="mdi mdi-chart-bar"></i>
@@ -112,14 +129,14 @@
               <span class="menu-title">Charts</span>
             </a>
           </li>
-          <li class="nav-item menu-items">
+          <!-- <li class="nav-item menu-items">
             <a class="nav-link" href="pages/icons/mdi.html">
               <span class="menu-icon">
                 <i class="mdi mdi-contacts"></i>
               </span>
               <span class="menu-title">Plans</span>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item menu-items">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <span class="menu-icon">

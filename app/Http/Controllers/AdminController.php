@@ -85,13 +85,21 @@ class AdminController extends Controller
     public function add_package(Request $request ){
         $package = new package;
 
-        $product->title = $request->title;
-        $product->description = $request->title;
-        $product->monthly = $request->title;
-        $product->3months = $request->title;
-        $product->title = $request->title;
-        $product->title = $request->title;
-        $product->title = $request->title;
-        $product->title = $request->title;
+        $package->title = $request->title;
+        $package->description = $request->description;
+        $package->monthly = $request->monthly;
+        $package->months_3 = $request->month3;
+        $package->months_6 = $request->month6;
+        $package->annual = $request->annual;
+        $package->day_entry = $request->day;
+        $package->note = $request->note;
+
+        $image=$request->image;
+        $imagename=time().'.'.$image->getClientOriginalExtension();
+        $request->image->move('package',$imagename);
+        $package->image = $imagename;
+
+        $package->save();
+        return redirect()->back()->with('message','Package Added Successfully');
     }
 }

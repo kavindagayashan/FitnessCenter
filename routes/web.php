@@ -50,3 +50,7 @@ route::post('/add_staff', [AdminController::class,'add_staff']);
 route::get('/view_staff', [AdminController::class,'view_staff']);
 
 route::get('/delete_staff/{id}', [AdminController::class,'delete_staff']);
+
+route::get('/view_package', [AdminController::class,'view_package']);
+
+route::post('/add_package', [AdminController::class,'add_package']);
