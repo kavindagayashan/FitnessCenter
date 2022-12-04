@@ -54,3 +54,5 @@ route::get('/delete_staff/{id}', [AdminController::class,'delete_staff']);
 route::get('/view_package', [AdminController::class,'view_package']);
 
 route::post('/add_package', [AdminController::class,'add_package']);
+
+route::get('/show_package', [AdminController::class,'show_package']);

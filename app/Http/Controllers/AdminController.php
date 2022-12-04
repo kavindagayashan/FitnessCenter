@@ -102,4 +102,9 @@ class AdminController extends Controller
         $package->save();
         return redirect()->back()->with('message','Package Added Successfully');
     }
+
+    public function show_package(){
+        $package = Package::all();
+        return view('admin.show_package',compact('package'));
+    }
 }

@@ -22,6 +22,13 @@
         }
         .sub_form{
             padding-top :10px;
+            margin-bottom:15px;
+        }
+        .form{
+            border:2px solid white;
+           /* margin-left:200px; */
+           /* width:90%; */
+           
         }
     </style>
   </head>
@@ -50,7 +57,7 @@
             <div class="div_center">
                     <h2 class="font_size">Add Package</h2>
 
-                 <form action="{{url('/add_package')}}" method="POST" enctype="multipart/form-data">
+                 <form class="form" action="{{url('/add_package')}}" method="POST" enctype="multipart/form-data">
 
 
                  @csrf
