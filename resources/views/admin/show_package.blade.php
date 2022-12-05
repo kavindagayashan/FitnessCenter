@@ -50,7 +50,7 @@
             </div>
 
             @endif
-            
+
            <h2 class="font_size">All Packages</h2>
              <table class="center">
                 <tr class ="th_color">
@@ -83,7 +83,7 @@
                         <img class="img_size" src="/package/{{$package->image}}">
                     </td>
                     <td><a class="btn btn-danger" onclick="return confirm('Confirm the Delete Package')" href="{{url('delete_package', $package->id)}}">Delete</a></td>
-                    <td><a class="btn btn-success" href=" ">Edit</a></td>
+                    <td><a class="btn btn-success" href="{{url('update_package',$package->id)}} ">Edit</a></td>
                 </tr>
 
                 @endforeach

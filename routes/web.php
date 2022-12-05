@@ -58,3 +58,8 @@ route::post('/add_package', [AdminController::class,'add_package']);
 route::get('/show_package', [AdminController::class,'show_package']);
 
 route::get('/delete_package/{id}', [AdminController::class,'delete_package']);
+
+route::get('/update_package/{id}', [AdminController::class,'update_package']);
+
+route::post('/update_package_confirm/{id}', [AdminController::class,'update_package_confirm']);
+

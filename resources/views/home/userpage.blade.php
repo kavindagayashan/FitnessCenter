@@ -43,7 +43,7 @@
       <!-- end client section -->
 
       <!-- product section -->
-      @include('home.product')
+      @include('home.package')
       <!-- end product section -->
 
       <!-- subscribe section -->

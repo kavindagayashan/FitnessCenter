@@ -114,4 +114,35 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message','Package Deleted Successfully');
     }
+
+    public function update_package($id){
+        $package = package::find($id);
+        return view('admin.update_package',compact('package'));
+    }
+
+    public function update_package_confirm(Request $request,$id){
+        $package = package::find($id);
+
+        $package->title=$request->title;
+        $package->description=$request->description;
+        $package->monthly=$request->monthly;
+        $package->months_3=$request->month3;
+        $package->months_6=$request->month6;
+        $package->annual=$request->annual;
+        $package->day_entry=$request->day;
+        $package->note=$request->note;
+
+        $image=$request->image;
+
+        if($image){
+
+            $imagename=time().'.'.$image->getClientOriginalExtension();
+            $request->image->move('package',$imagename);
+            $package->image = $imagename;
+        }
+        
+
+        $package->save();
+        return redirect()->back()->with('message','Package Updated Successfully');
+    }
 }

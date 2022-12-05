@@ -8,10 +8,13 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
 
+use App\Models\Package;
+
 class HomeController extends Controller
 {
     public function index(){
-        return view('home.userpage');
+        $package = Package::all();
+        return view('home.userpage',compact('package'));
     }
     public function redirect(){
 
