@@ -13,6 +13,7 @@
 
         .font_size{
             padding-bottom:15px;
+            font-size:30px;
         }
         label{
             width:200px;
@@ -30,6 +31,9 @@
            /* margin-left:200px; */
            /* width:90%; */
            
+        }
+        .input_color{
+            color:black;
         }
     </style>
   </head>
@@ -56,43 +60,43 @@
             @endif
              
             <div class="div_center">
-                    <h2 class="font_size">Update Package</h2>
+                    <h2 class="font_size"><b>Update Package</b></h2>
 
                  <form class="form" action="{{url('/update_package_confirm',$package->id)}}" method="POST" enctype="multipart/form-data">
 
 
                  @csrf
                     <div  class="div_design">
-                        <label>Package Title :</label>
-                       <input type="text" name="title" required="" value="{{$package->title}}">
+                        <label style="padding-top:30px">Package Title :</label>
+                       <input class="input_color" type="text" name="title" required="" value="{{$package->title}}">
                     </div>
                     <div class="div_design">
                         <label>Package Description :</label>
-                       <input type="text" name="description" value="{{$package->description}}">
+                       <input class="input_color" type="text" name="description" value="{{$package->description}}">
                     </div>
                     <div class="div_design">
                         <label>Monthly Package :</label>
-                       <input type="number" name="monthly" min="0" value="{{$package->monthly}}">
+                       <input class="input_color" type="number" name="monthly" min="0" value="{{$package->monthly}}">
                     </div>
                     <div  class="div_design">
                         <label>3 Months Package :</label>
-                       <input type="number" name="month3" min="0" value="{{$package->months_3}}">
+                       <input class="input_color" type="number" name="month3" min="0" value="{{$package->months_3}}">
                     </div>
                     <div  class="div_design">
                         <label>6 Months Package :</label>
-                       <input type="number" name="month6" min="0" value="{{$package->months_6}}">
+                       <input class="input_color" type="number" name="month6" min="0" value="{{$package->months_6}}">
                     </div>
                     <div  class="div_design">
                         <label>Annual Package :</label>
-                       <input type="number" name="annual" min="0" value="{{$package->annual}}">
+                       <input class="input_color" type="number" name="annual" min="0" value="{{$package->annual}}">
                     </div>
                     <div  class="div_design">
                         <label>Day Entry :</label>
-                       <input type="number" name="day" min="0" value="{{$package->day_entry}}">
+                       <input class="input_color" type="number" name="day" min="0" value="{{$package->day_entry}}">
                     </div>
                     <div class="div_design">
                         <label>Note:</label>
-                       <input type="text" name="note" value="{{$package->note}}">
+                       <input class="input_color" type="text" name="note" value="{{$package->note}}">
                     </div>
 
                     <div  class="div_design">

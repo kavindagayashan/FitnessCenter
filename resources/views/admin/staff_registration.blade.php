@@ -28,6 +28,9 @@
        .sub_form{
             padding-top :10px;
         }
+        .input_color{
+          color:black;
+        }
     </style>
   </head>
   <body>
@@ -59,7 +62,7 @@
                         @csrf
                     <div class="div_design">
                         <label for="name">Full Name:</label>
-                        <input type="text" name="name" required=""><br>
+                        <input class="input_color" type="text" name="name" required=""><br>
                     </div>
 
                     <div class="div_design">
@@ -72,18 +75,18 @@
 
                     <div class="div_design">
                         <label for="birthday">Date of Birth:</label>
-                        <input type="date" id="birthday" name="birthday" required=""><br>
+                        <input class="input_color" type="date" id="birthday" name="birthday" required=""><br>
                         </div>
 
                         <div class="div_design">
                         <label for="qualification">Qualification:</label>
-                        <input type="checkbox" id="degree" name="qualification[]" value="Degree" >
+                        <input class="input_color" type="checkbox" id="degree" name="qualification[]" value="Degree" >
                         <label for="degree"> Degree</label>
-                        <input type="checkbox" id="diploma" name="qualification[]" value="Diploma" >
+                        <input class="input_color" type="checkbox" id="diploma" name="qualification[]" value="Diploma" >
                         <label for="diploma"> Diploma</label>
-                        <input type="checkbox" id="cerificate" name="qualification[]" value="Cerificate" >
+                        <input class="input_color" type="checkbox" id="cerificate" name="qualification[]" value="Cerificate" >
                         <label for="cerificate"> Cerificate</label>
-                        <input type="checkbox" id="following" name="qualification[]" value="Following" >
+                        <input class="input_color" type="checkbox" id="following" name="qualification[]" value="Following" >
                         <label for="following"> Following</label><br>
                         </div>
 
@@ -103,29 +106,29 @@
 
                         <div class="div_design">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required=""><br>
+                        <input class="input_color" type="email" id="email" name="email" required=""><br>
                         </div>
 
                         <div class="div_design">
                         <label for="address">Address:</label>
-                        <input type="textarea" id="address" name="address" required=""><br>
+                        <input class="input_color"type="textarea" id="address" name="address" required=""><br>
                         </div>
 
                         <div class="div_design">
                         <label for="address">Phone:</label>
-                        <input type="number" id="phone" name="phone" required=""><br>
+                        <input class="input_color" type="number" id="phone" name="phone" required=""><br>
                         </div>
 
                         <div class="div_design">
                         <label for="joindate">Join Date:</label>
-                        <input type="date" id="joindate" name="joindate" required=""><br>
+                        <input class="input_color" type="date" id="joindate" name="joindate" required=""><br>
                         </div>
 
                         <div class="div_design">
                         <label for="position">Position:</label>
-                        <input type="radio" id="senior" name="position" value="Senior Fitness Instructor" required="">
+                        <input class="input_color" type="radio" id="senior" name="position" value="Senior Fitness Instructor" required="">
                         <label for="senior"> Senior Fitness Instructor</label>
-                        <input type="radio" id="general" name="position" value="Fitness Instructor" required="">
+                        <input class="input_color" type="radio" id="general" name="position" value="Fitness Instructor" required="">
                         <label for="general"> Fitness Instructor</label><br>
                         </div>
                         <!-- <label for="cv">CV or Resume:</label>

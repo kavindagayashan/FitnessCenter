@@ -16,6 +16,10 @@
             .center .tr .td{
                 font-size: 16px;
             }
+            .staff{
+              font-size:30px;
+              text-align:center;
+            }
         </style>
 
   </head>
@@ -41,7 +45,7 @@
 
             @endif
 
-        <h2>Staff</h2>
+        <h2 class="staff"><b>Staff</b></h2>
         <table class="center">
             <tr>
                 <td>Member ID</td>

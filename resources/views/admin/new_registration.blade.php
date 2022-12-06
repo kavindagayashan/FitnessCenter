@@ -29,6 +29,9 @@
        .sub_form{
             padding-top :10px;
         }
+        .input_color{
+            color:black;
+        }
     </style>
 </head>
 
@@ -61,7 +64,7 @@
                         @csrf
                     <div class="div_design">
                         <label for="name">Name:</label>
-                        <input type="name" name="name" required=""><br>
+                        <input class="input_color" type="name" name="name" required=""><br>
                     </div>
                     <div class="div_design">
                         <label for="gender">Gender:</label>
@@ -72,27 +75,27 @@
                     </div>
                     <div class="div_design">
                         <label for="birthday">Date of Birth:</label>
-                        <input type="date" id="birthday" name="birthday" required=""><br>
+                        <input class="input_color" type="date" id="birthday" name="birthday" required=""><br>
                     </div>
                     <div class="div_design">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required=""><br>
+                        <input class="input_color" type="email" id="email" name="email" required=""><br>
                     </div>
                     <div class="div_design">
                         <label for="address">Address:</label>
-                        <input type="textarea" id="address" name="address" required=""><br>
+                        <input class="input_color" type="textarea" id="address" name="address" required=""><br>
                     </div>
                     <div class="div_design">
                         <label for="address">Phone:</label>
-                        <input type="number" id="phone" name="phone" required=""><br>
+                        <input class="input_color" type="number" id="phone" name="phone" required=""><br>
                     </div>
                     <div class="div_design">
                         <label for="joindate">Join Date:</label>
-                        <input type="date" id="joindate" name="joindate" required=""><br>
+                        <input class="input_color" type="date" id="joindate" name="joindate" required=""><br>
                     </div>
                     <div class="div_design">
                         <label for="plan">Plan:</label>
-                        <input type="text" id="plan" name="customselect" required=""><br>
+                        <input class="input_color" type="text" id="plan" name="customselect" required=""><br>
                     </div>
                         <!-- <label for="plan">Plan:</label>
                         <select name="customselect" id="inputGroupSelect01">

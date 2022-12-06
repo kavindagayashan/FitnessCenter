@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
+      <base href="/public">
       <!-- Basic -->
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,17 +23,17 @@
       <link href="home/css/responsive.css" rel="stylesheet" />
    </head>
    <body>
-      <!-- <div class="hero_area"> -->
+      <div class="hero_area">
          <!-- header section strats -->
       @include('home.header')
          <!-- end header section -->
          
-      <!-- </div> -->
-      <div class="col-sm-6 col-md-4 col-lg-4" style="margin:auto; width:50%; padding: 30px">
-                  <div class="box">
-                     <!-- <div class="option_container">
+      
+      <div class="col-sm-6 col-md-4 col-lg-4" style="margin:auto;width:50%;padding:30px">
+                  <!-- <div class="box">
+                     <div class="option_container">
                         <div class="options">
-                           <a href="{{url('product_details')}}" class="option1">
+                           <a href="{{url('package_details',$package->id)}}" class="option1">
                            More Details
                            </a>
                            <a href="" class="option2">
@@ -40,26 +41,43 @@
                            </a>
                         </div>
                      </div> -->
-                     <div class="img-box">
-                        <img src="images/pro.jpg" alt="pro picture"><br><br>
+                     <div class="img-box" style="padding-bottom:30px">
+                        <img src="package/{{$package->image}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
-                           <b>PRO Packages</b>
+                           {{$package->title}}
                         </h5>
+                        
                         <h6>
-                           <b>Starts from Rs: 1499</b><br><br>
-                           <b>Annual : </b>Per Month Rs: 1499<br>
-                           <b>6 Months : </b> Per Month Rs: 1999<br>
-                           <b>3 Months  : </b> Per Month Rs: 2333<br>
-                           <b>Monthly : </b>Per Month Rs: 2999<br>
+                           {{$package->description}}
                         </h6>
+                        <h6> <b>Monthly Fee :</b>
+                           {{$package->monthly}}
+                        </h6>
+                        
+                        <h6> <b>3 Months Package :</b>
+                           {{$package->months_3}}
+                        </h6>
+                        <h6><b>6 Months Package :</b>
+                           {{$package->months_6}}
+                        </h6>
+                        <h6><b>Annual Package :</b>
+                           {{$package->annual}}
+                        </h6>
+                        @if($package->day_entry!=null)
+                        <h6><b>Day Entry :</b>
+                           {{$package->day_entry}}
+                        </h6>
+                        @endif
+                        <h6>
+                           {{$package->note}}
+                        </h6>
+                        <a href="" class="btn btn-primary">Add to Cart</a>
                      </div>
-                     <h4> </h4>
                   </div>
                </div>
       <!-- footer start -->
-      
       @include('home.footer')
       <!-- footer end -->
 

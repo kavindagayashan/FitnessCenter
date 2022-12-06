@@ -12,6 +12,7 @@
 
         .font_size{
             padding-bottom:15px;
+            font-size:30px;
         }
         label{
             width:200px;
@@ -29,6 +30,10 @@
            /* margin-left:200px; */
            /* width:90%; */
            
+        }
+
+        .input_color{
+            color:black;
         }
     </style>
   </head>
@@ -55,43 +60,43 @@
             @endif
              
             <div class="div_center">
-                    <h2 class="font_size">Add Package</h2>
+                    <h2 class="font_size"><b>Add Package</b></h2>
 
                  <form class="form" action="{{url('/add_package')}}" method="POST" enctype="multipart/form-data">
 
 
                  @csrf
                     <div  class="div_design">
-                        <label>Package Title :</label>
-                       <input type="text" name="title" required="">
+                        <label style="padding-top:30px">Package Title :</label>
+                       <input class="input_color" type="text" name="title" required="">
                     </div>
                     <div class="div_design">
                         <label>Package Description :</label>
-                       <input type="text" name="description" >
+                       <input class="input_color"type="text" name="description" >
                     </div>
                     <div class="div_design">
                         <label>Monthly Package :</label>
-                       <input type="number" name="monthly" min="0" >
+                       <input class="input_color" type="number" name="monthly" min="0" >
                     </div>
                     <div  class="div_design">
                         <label>3 Months Package :</label>
-                       <input type="number" name="month3" min="0">
+                       <input class="input_color" type="number" name="month3" min="0">
                     </div>
                     <div  class="div_design">
                         <label>6 Months Package :</label>
-                       <input type="number" name="month6" min="0">
+                       <input class="input_color" type="number" name="month6" min="0">
                     </div>
                     <div  class="div_design">
                         <label>Annual Package :</label>
-                       <input type="number" name="annual" min="0">
+                       <input class="input_color"type="number" name="annual" min="0">
                     </div>
                     <div  class="div_design">
                         <label>Day Entry :</label>
-                       <input type="number" name="day" min="0" >
+                       <input class="input_color" type="number" name="day" min="0" >
                     </div>
                     <div class="div_design">
                         <label>Note:</label>
-                       <input type="text" name="note" >
+                       <input class="input_color" type="text" name="note" >
                     </div>
                     <div  class="div_design">
                         <label>Image :</label>

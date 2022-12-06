@@ -15,6 +15,7 @@
         }
         .font_size{
             text-align:center;
+            font-size:30px;
         }
 
         .img_size{
@@ -51,7 +52,7 @@
 
             @endif
 
-           <h2 class="font_size">All Packages</h2>
+           <h2 class="font_size"><b>All Packages</b></h2>
              <table class="center">
                 <tr class ="th_color">
                     <th class="tr_color">Package Title</th>

@@ -13,7 +13,7 @@ use App\Models\Package;
 class HomeController extends Controller
 {
     public function index(){
-        $package = Package::all();
+        $package = package::all();
         return view('home.userpage',compact('package'));
     }
     public function redirect(){
@@ -26,11 +26,13 @@ class HomeController extends Controller
         }
 
         else{
-            return view('home.userpage');
+            $package = package::all();
+            return view('home.userpage',compact('package'));
         }
     }
 
-    public function product_details(){
-        return view('home.product_details');
+    public function package_details($id){
+        $package = package::find($id);
+        return view('home.package_details',compact('package'));
     }
 }

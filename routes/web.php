@@ -35,7 +35,7 @@ route::get('/redirect', [HomeController::class,'redirect']);
 
 route::get('/new_registration', [AdminController::class,'new_registration']);
 
-route::get('/product_details', [HomeController::class,'product_details']);
+route::get('/package_details/{id}', [HomeController::class,'package_details']);
 
 route::post('/add_client', [AdminController::class,'add_client']);
 

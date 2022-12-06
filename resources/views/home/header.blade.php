@@ -21,7 +21,7 @@
                            <a class="nav-link" href="aboutus.html">About Us</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="blog_list.html">Services</a>
+                           <a class="nav-link" href="{{url('/home.package')}}">Services</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="blog_list.html">Blog</a>
