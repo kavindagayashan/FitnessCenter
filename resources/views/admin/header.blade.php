@@ -18,7 +18,7 @@
             <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item dropdown d-none d-lg-block">
                 <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown" data-toggle="dropdown" aria-expanded="false" href="#">+ Create New Fitness Article</a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
+                <!-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="createbuttonDropdown">
                   <h6 class="p-3 mb-0">Projects</h6>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
@@ -55,9 +55,9 @@
                   </a>
                   <div class="dropdown-divider"></div>
                   <p class="p-3 mb-0 text-center">See all projects</p>
-                </div>
+                </div> -->
               </li>
-              <li class="nav-item nav-settings d-none d-lg-block">
+              <!-- <li class="nav-item nav-settings d-none d-lg-block">
                 <a class="nav-link" href="#">
                   <i class="mdi mdi-view-grid"></i>
                 </a>
@@ -66,8 +66,8 @@
                 <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
                   <i class="mdi mdi-email"></i>
                   <span class="count bg-success"></span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                </a> -->
+                <!-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
                   <h6 class="p-3 mb-0">Messages</h6>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
@@ -101,14 +101,14 @@
                   </a>
                   <div class="dropdown-divider"></div>
                   <p class="p-3 mb-0 text-center">4 new messages</p>
-                </div>
+                </div> -->
               </li>
               <li class="nav-item dropdown border-left">
                 <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
                   <i class="mdi mdi-bell"></i>
                   <span class="count bg-danger"></span>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                <!-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
                   <h6 class="p-3 mb-0">Notifications</h6>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
@@ -148,7 +148,7 @@
                   </a>
                   <div class="dropdown-divider"></div>
                   <p class="p-3 mb-0 text-center">See all notifications</p>
-                </div>
+                </div> -->
               </li>
               <!-- <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">

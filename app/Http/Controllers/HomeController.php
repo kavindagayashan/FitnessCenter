@@ -10,6 +10,8 @@ use App\Models\User;
 
 use App\Models\Package;
 
+use App\Models\Cart;
+
 class HomeController extends Controller
 {
     public function index(){
@@ -34,5 +36,31 @@ class HomeController extends Controller
     public function package_details($id){
         $package = package::find($id);
         return view('home.package_details',compact('package'));
+    }
+
+    public function add_cart($id){
+        if(Auth::id()){
+
+            $user=Auth::user();
+
+           $package=package::find($id);
+
+           $cart = new cart;
+
+           $cart->name=$user->name;
+           $cart->email=$user->email;
+           $cart->user_id=$user->id;
+           $cart->title=$package->title;
+           $cart->package_id=$package->id;
+
+
+           $cart->save();
+           return redirect()->back();
+        }
+
+        else{
+
+            return redirect('login');
+        }
     }
 }

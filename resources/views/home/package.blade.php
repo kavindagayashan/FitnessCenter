@@ -16,9 +16,15 @@
                            <a href="{{url('package_details',$package->id)}}" class="option1">
                            More Details
                            </a>
-                           <a href="" class="option2">
+                           <!-- <a href="" class="option2">
                            Register
-                           </a>
+                           </a>  -->
+                           <form action="{{url('add_cart',$package->id)}}" method="Post">
+                              @csrf
+                              <div class="col-md-4">
+                              <input type="submit" value="Register">
+                              </div> 
+                           </form>
                         </div>
                      </div>
                      <div class="img-box">

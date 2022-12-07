@@ -52,28 +52,35 @@
                         <h6>
                            {{$package->description}}
                         </h6>
-                        <h6> <b>Monthly Fee :</b>
+                        <h6> <b>Monthly Fee : Rs. </b>
                            {{$package->monthly}}
                         </h6>
                         
-                        <h6> <b>3 Months Package :</b>
+                        <h6> <b>3 Months Package : Rs. </b>
                            {{$package->months_3}}
                         </h6>
-                        <h6><b>6 Months Package :</b>
+                        <h6><b>6 Months Package : Rs. </b>
                            {{$package->months_6}}
                         </h6>
-                        <h6><b>Annual Package :</b>
+                        <h6><b>Annual Package : Rs. </b>
                            {{$package->annual}}
                         </h6>
                         @if($package->day_entry!=null)
-                        <h6><b>Day Entry :</b>
+                        <h6><b>Day Entry :  Rs. </b>
                            {{$package->day_entry}}
                         </h6>
                         @endif
-                        <h6>
+                        <h6 style="padding-bottom:30px">
                            {{$package->note}}
                         </h6>
-                        <a href="" class="btn btn-primary">Add to Cart</a>
+
+                        <!-- <a href="" class="btn btn-primary">Add to Cart</a> -->
+                        <form action="{{url('add_cart',$package->id)}}" method="Post">
+                              @csrf
+                              <div class="col-md-4">
+                              <input type="submit" value="Register">
+                              </div> 
+                           </form>
                      </div>
                   </div>
                </div>
