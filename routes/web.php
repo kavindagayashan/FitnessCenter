@@ -66,3 +66,6 @@ route::post('/update_package_confirm/{id}', [AdminController::class,'update_pack
 route::post('/add_cart/{id}', [HomeController::class,'add_cart']);
 
 route::get('/show_cart', [HomeController::class,'show_cart']);
+
+route::get('/remove_cart/{id}', [HomeController::class,'remove_cart']);
+

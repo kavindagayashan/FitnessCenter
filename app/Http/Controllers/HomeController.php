@@ -78,4 +78,14 @@ class HomeController extends Controller
             }
         
     }
+
+    public function remove_cart($id){
+
+        $cart=cart::find($id);
+
+        $cart->delete();
+
+        return redirect()->back();
+
+    }
 }

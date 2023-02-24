@@ -64,11 +64,11 @@
             <tr>
                 <td>{{$cart->title}}</td>
                 <td>{{$cart->package_id}}</td>
-                <td><a class="btn btn-danger" href="{{url('/remove_cart,$cart-id}}">Remove</a></td>
+                <td><a class="btn btn-danger" onclick="return confirm('Are you sure to remove your selected package?')" href="{{url('/remove_cart',$cart->id)}}">Remove</a></td>
 
             </tr>
 
-            <!-- <?php $totalprice=$totalprice + $cart->price ?> -->
+           
 
                 @endforeach
         </table>
