@@ -64,3 +64,5 @@ route::get('/update_package/{id}', [AdminController::class,'update_package']);
 route::post('/update_package_confirm/{id}', [AdminController::class,'update_package_confirm']);
 
 route::post('/add_cart/{id}', [HomeController::class,'add_cart']);
+
+route::get('/show_cart', [HomeController::class,'show_cart']);
