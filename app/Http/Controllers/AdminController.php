@@ -128,11 +128,9 @@ class AdminController extends Controller
 
         $package->title=$request->title;
         $package->description=$request->description;
-        $package->monthly=$request->monthly;
-        $package->months_3=$request->month3;
-        $package->months_6=$request->month6;
-        $package->annual=$request->annual;
-        $package->day_entry=$request->day;
+        $package->price = $request->price;
+        $package->discount_price = $request->dis_price;
+        $package->special_info = $request->info;
         $package->note=$request->note;
 
         $image=$request->image;

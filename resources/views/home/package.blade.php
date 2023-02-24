@@ -7,19 +7,19 @@
             </div>
             <div class="row">
 
-            @foreach($package as $package )
+            @foreach($package as $packages )
 
                <div class="col-sm-6 col-md-4 col-lg-4">
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="{{url('package_details',$package->id)}}" class="option1">
+                           <a href="{{url('package_details',$packages->id)}}" class="option1">
                            More Details
                            </a>
                            <!-- <a href="" class="option2">
                            Register
                            </a>  -->
-                           <form action="{{url('add_cart',$package->id)}}" method="Post">
+                           <form action="{{url('add_cart',$packages->id)}}" method="Post">
                               @csrf
                               <div class = "col-md-4">
                                  
@@ -34,16 +34,29 @@
                         </div>
                      </div>
                      <div class="img-box">
-                        <img src="package/{{$package->image}}" alt="">
+                        <img src="package/{{$packages->image}}" alt="">
                      </div>
                      <div class="detail-box">
                         <h5>
-                           {{$package->title}}
+                           {{$packages->title}}
                         </h5>
-                        
-                        <h6>
-                           {{$package->description}}
+
+                        @if($packages->discount_price!=null)
+                        <h6 style="color:red">
+                        Discount price<br>
+                           Rs: {{$packages->discount_price}}
                         </h6>
+
+                        <h6 style="text-decoration: line-through; color:blue">Price<br>
+                           Rs: {{$packages->price}}
+                        </h6>
+
+                        @else
+                        <h6 style="color:blue">Price<br> Rs: {{$packages->price}}
+                        </h6>
+
+                        @endif
+                        
                      </div>
                   </div>
                </div>
@@ -56,5 +69,11 @@
             </div> -->
 
             @endforeach
+
+            <!-- {!!$package->appends(Request::all())->links()!!} -->
+
+            <span style="padding-top:20px;">
+            {!!$package->withQueryString()->links('pagination::bootstrap-5')!!}
+            </span>
          </div>
       </section>

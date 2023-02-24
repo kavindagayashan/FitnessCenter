@@ -15,7 +15,7 @@ use App\Models\Cart;
 class HomeController extends Controller
 {
     public function index(){
-        $package = package::all();
+        $package = package::paginate(9);
         return view('home.userpage',compact('package'));
     }
     public function redirect(){
@@ -28,7 +28,7 @@ class HomeController extends Controller
         }
 
         else{
-            $package = package::all();
+            $package = package::paginate(9);
             return view('home.userpage',compact('package'));
         }
     }
