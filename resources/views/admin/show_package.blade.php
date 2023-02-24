@@ -57,11 +57,9 @@
                 <tr class ="th_color">
                     <th class="tr_color">Package Title</th>
                     <th class="tr_color">Package Description</th>
-                    <th class="tr_color">Monthly (Rs)</th>
-                    <th class="tr_color">3 Month Package (Rs) </th>
-                    <th class="tr_color">6 Month Package (Rs)</th>
-                    <th class="tr_color">Annual Package (Rs)</th>
-                    <th class="tr_color">Day Entry (Rs)</th>
+                    <th class="tr_color">Package Price (Rs)</th>
+                    <th class="tr_color">Discount Price (Rs) </th>
+                    <th class="tr_color">Special Info</th>
                     <th class="tr_color">Note </th>
                     <th class="tr_color">Details Image  </th>
                     <th class="tr_color">Delete </th>
@@ -74,11 +72,9 @@
                 <tr>
                     <td>{{$package->title}}</td>
                     <td>{{$package->description}}</td>
-                    <td>{{$package->monthly}}</td>
-                    <td>{{$package->months_3}}</td>
-                    <td>{{$package->months_6}}</td>
-                    <td>{{$package->annual}}</td>
-                    <td>{{$package->day_entry}}</td>
+                    <td>{{$package->price}}</td>
+                    <td>{{$package->discount_price}}</td>
+                    <td>{{$package->special_info}}</td>
                     <td>{{$package->note}}</td>
                     <td>
                         <img class="img_size" src="/package/{{$package->image}}">

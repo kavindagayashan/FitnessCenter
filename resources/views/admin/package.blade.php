@@ -75,27 +75,19 @@
                        <input class="input_color"type="text" name="description" >
                     </div>
                     <div class="div_design">
-                        <label>Monthly Package :</label>
-                       <input class="input_color" type="number" name="monthly" min="0" >
+                        <label>Package Price :</label>
+                       <input class="input_color" type="number" name="price" min="0" required="">
                     </div>
                     <div  class="div_design">
-                        <label>3 Months Package :</label>
-                       <input class="input_color" type="number" name="month3" min="0">
+                        <label>Discount Price :</label>
+                       <input class="input_color" type="number" name="dis_price" min="0">
                     </div>
                     <div  class="div_design">
-                        <label>6 Months Package :</label>
-                       <input class="input_color" type="number" name="month6" min="0">
-                    </div>
-                    <div  class="div_design">
-                        <label>Annual Package :</label>
-                       <input class="input_color"type="number" name="annual" min="0">
-                    </div>
-                    <div  class="div_design">
-                        <label>Day Entry :</label>
-                       <input class="input_color" type="number" name="day" min="0" >
+                        <label>Special Info :</label>
+                       <input class="input_color"type="text" name="info" >
                     </div>
                     <div class="div_design">
-                        <label>Note:</label>
+                        <label>Note :</label>
                        <input class="input_color" type="text" name="note" >
                     </div>
                     <div  class="div_design">

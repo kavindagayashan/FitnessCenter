@@ -21,6 +21,12 @@
                            </a>  -->
                            <form action="{{url('add_cart',$package->id)}}" method="Post">
                               @csrf
+                              <div class = "col-md-4">
+                                 
+
+                              </div>
+
+                              
                               <div class="col-md-4">
                               <input type="submit" value="Register">
                               </div> 
