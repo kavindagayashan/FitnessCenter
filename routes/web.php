@@ -79,4 +79,4 @@ route::get('/confirmed/{id}', [AdminController::class,'confirmed']);
 
 route::get('/print_pdf/{id}', [AdminController::class,'print_pdf']);
 
-route::get('/search', [AdminController::class,'search']);
+route::get('/search', [AdminController::class,'searchdata']);

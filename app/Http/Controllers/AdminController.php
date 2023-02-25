@@ -178,7 +178,11 @@ class AdminController extends Controller
         return $pdf->download('payment_details.pdf');
     }
 
-    public function search(Request $request){
+    public function searchdata(Request $request){
             $searchText=$request->search;
+
+            $payment=payment::where('name','LIKE',"%$searchText%")->orWhere('title','LIKE',"%$searchText%")->get();
+
+            return view('admin.payment', compact('payment'));
     }
 }   

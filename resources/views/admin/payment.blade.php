@@ -32,7 +32,7 @@
                 <div style="padding-left:400px; padding-bottom:30px;">
                     <form action="{{url('search')}}" method="get">
                         @csrf
-                        <input type="text" name="search" placeholder="Search here">
+                        <input type="text" style="color:black" name="search" placeholder="Search here">
                         <input type="submit" value="Search" class="btn btn-outline-primary">
                     </form>
                 </div>
@@ -57,7 +57,7 @@
     </thead>
      <tbody>
 
-  @foreach($payment as $payment)
+  @forelse($payment as $payment)
     <tr>
       
       <td style="color:darkgray;font-size: 16px">{{$payment->user_id}}</td>
@@ -92,7 +92,14 @@
         </td>
     </tr>
     
-    @endforeach
+    @empty
+    <tr>
+
+        <td colspan="16" style="color:darkgray">
+        No Data Found
+        </td>
+    </tr>
+    @endforelse
   </tbody>
 </table>
 </div>
