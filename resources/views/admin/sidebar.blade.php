@@ -156,7 +156,7 @@
             </div>
           </li> -->
           <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+            <a class="nav-link" href="{{url('payment')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-security"></i>
               </span>

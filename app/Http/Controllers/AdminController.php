@@ -10,6 +10,8 @@ use App\Models\NewStaff;
 
 use App\Models\Package;
 
+use App\Models\Payment;
+
 class AdminController extends Controller
 {
     public function new_registration(){
@@ -146,4 +148,11 @@ class AdminController extends Controller
         $package->save();
         return redirect()->back()->with('message','Package Updated Successfully');
     }
-}
+
+
+    public function payment()
+    {
+        $payment = payment::all();
+        return view('admin.payment', compact('payment'));
+    }
+}   
