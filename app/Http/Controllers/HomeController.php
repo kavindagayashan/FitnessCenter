@@ -140,6 +140,7 @@ class HomeController extends Controller
             $payment->price=$data->price;
             $payment->image=$data->image;
             $payment->payment_status="Paid";
+            $payment->confirmation_status="Pending";
 
             $payment->save();
 

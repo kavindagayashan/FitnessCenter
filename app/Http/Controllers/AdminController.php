@@ -155,4 +155,16 @@ class AdminController extends Controller
         $payment = payment::all();
         return view('admin.payment', compact('payment'));
     }
+
+
+    public function confirmed($id){
+
+        $payment = payment::find($id);
+        $payment->confirmation_status="Confirmed";
+        // $payment->confirmation_status=<span style="font-size: 15px" class="badge badge-success">"Confirmed"</span>;
+
+        $payment->save();
+
+        return redirect()->back();
+    }
 }   

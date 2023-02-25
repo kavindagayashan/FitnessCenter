@@ -12,11 +12,6 @@
             padding-bottom: 20px;
         }
 
-        .table{
-            margin:auto;
-            
-        }
-
         
     </style>
   </head>
@@ -33,7 +28,8 @@
              <div class="content-wrapper">
                 <h1 class="title">Payments</h1>
 
-                <table class="table">
+                <div class="table-responsive">
+                <table style="margin:auto" class="table">
     <thead>
     <tr>
       <th style="color:white; font-size: 18px" >User Id</th>
@@ -43,7 +39,9 @@
       <th style="color:white; font-size: 18px" >Package Title</th>
       <th style="color:white; font-size: 18px" >Amount</th>
       <th style="color:white; font-size: 18px" >Payment Status</th>
+      <th style="color:white; font-size: 18px" >Status</th>
       <th style="color:white; font-size: 18px" >Image</th>
+      <th style="color:white; font-size: 18px" >Confirmed</th>
     </tr>
     </thead>
      <tbody>
@@ -57,16 +55,34 @@
       <td style="color:darkgray;font-size: 16px">{{$payment->package_id}}</td>
       <td style="color:darkgray;font-size: 16px">{{$payment->title}}</td>
       <td style="color:darkgray;font-size: 16px">Rs: {{$payment->price}}</td>
-      <td><span class="badge badge-success">{{$payment->payment_status}}</span></td>
+      <td><span style="font-size: 15px" class="badge badge-success">{{$payment->payment_status}}</span></td>
+      <td><span style="font-size: 15px" class="badge badge-danger">{{$payment->confirmation_status}}</span></td>
       <!-- <td style="color:darkgray; font-size: 16px">{{$payment->payment_status}}</td>  <span class="badge badge-secondary">New</span></h3> -->
       <td>
         <img src="/package/{{$payment->image}}" alt="">
       </td>
+
+      <td>
+
+      @if($payment->confirmation_status=='Pending')
+       
+      <a href="{{url('confirmed',$payment->id)}}" onclick="return confirm('Are you sure to confirm the payment')" class="btn btn-primary">Confirmed</a>
+      
+    @else
+
+    <p><span style="font-size: 15px" class="badge badge-success">Confirmed</span></p>
+
+    @endif
+
+    
+
+        </td>
     </tr>
     
     @endforeach
   </tbody>
 </table>
+</div>
 
 
             </div>
