@@ -96,7 +96,7 @@
 
         <div>
             <p style="font-size:25px; paddin-bottom: 15px"><b>Proceed</p>
-            <a href="" class="btn btn-danger">Pay Using Card</a>
+            <a href="{{url('stripe', $totalprice)}}" class="btn btn-danger">Pay Using Card</a>
         </div>
         
 
