@@ -28,6 +28,15 @@
              <div class="content-wrapper">
                 <h1 class="title">Payments</h1>
 
+
+                <div style="padding-left:400px; padding-bottom:30px;">
+                    <form action="{{url('search')}}" method="get">
+                        @csrf
+                        <input type="text" name="search" placeholder="Search here">
+                        <input type="submit" value="Search" class="btn btn-outline-primary">
+                    </form>
+                </div>
+
                 <div class="table-responsive">
                 <table style="margin:auto" class="table">
     <thead>
@@ -42,6 +51,8 @@
       <th style="color:white; font-size: 18px" >Status</th>
       <th style="color:white; font-size: 18px" >Image</th>
       <th style="color:white; font-size: 18px" >Confirmed</th>
+      <th style="color:white; font-size: 18px" >Print PDF</th>
+
     </tr>
     </thead>
      <tbody>
@@ -74,7 +85,9 @@
 
     @endif
 
-    
+        </td>
+        <td>
+            <a href="{{url('print_pdf',$payment->id)}}" class="btn btn-secondary">Print PDF</a>
 
         </td>
     </tr>

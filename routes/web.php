@@ -76,3 +76,7 @@ Route::post('stripe/{totalprice}', [HomeController::class, 'stripePost'])->name(
 route::get('/payment', [AdminController::class,'payment']);
 
 route::get('/confirmed/{id}', [AdminController::class,'confirmed']);
+
+route::get('/print_pdf/{id}', [AdminController::class,'print_pdf']);
+
+route::get('/search', [AdminController::class,'search']);

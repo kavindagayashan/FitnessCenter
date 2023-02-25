@@ -12,6 +12,8 @@ use App\Models\Package;
 
 use App\Models\Payment;
 
+use PDF;
+
 class AdminController extends Controller
 {
     public function new_registration(){
@@ -166,5 +168,17 @@ class AdminController extends Controller
         $payment->save();
 
         return redirect()->back();
+    }
+
+    public function print_pdf($id){
+
+        $payment=payment::find($id);
+        $pdf=PDF::loadView('admin.pdf', compact('payment'));
+
+        return $pdf->download('payment_details.pdf');
+    }
+
+    public function search(Request $request){
+            $searchText=$request->search;
     }
 }   
