@@ -23,10 +23,8 @@
                               @csrf
                               <div class = "col-md-4">
                                  
-
                               </div>
 
-                              
                               <div class="col-md-4">
                               <input type="submit" value="Register">
                               </div> 

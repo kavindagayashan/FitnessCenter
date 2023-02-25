@@ -50,14 +50,14 @@
                         </h5>
                         
                         <h6>
-                           {{$package->description}}
+                          <b> {{$package->description}}</b>
                         </h6>
-                        <h6> <b>Monthly Fee : Rs. </b>
-                           {{$package->monthly}}
+                        <!-- <h6> <b>Package Price: Rs. </b>
+                           {{$package->price}}
                         </h6>
                         
-                        <h6> <b>3 Months Package : Rs. </b>
-                           {{$package->months_3}}
+                        <h6> <b>Discount Price : Rs. </b>
+                           {{$package->discount_price}}
                         </h6>
                         <h6><b>6 Months Package : Rs. </b>
                            {{$package->months_6}}
@@ -69,15 +69,50 @@
                         <h6><b>Day Entry :  Rs. </b>
                            {{$package->day_entry}}
                         </h6>
+                        @endif -->
+                        @if($package->discount_price!=null)
+                        <h6 style="color:red">
+                        <b>Discount price<br>
+                           Rs: {{$package->discount_price}}</b>
+                        </h6>
+
+                        <h6 style="text-decoration: line-through; color:blue"><b>Price<br>
+                           Rs: {{$package->price}}</b>
+                        </h6>
+
+                        @else
+                        <h6 style="color:blue">Price<br> Rs: {{$package->price}}
+                        </h6>
+
                         @endif
-                        <h6 style="padding-bottom:30px">
+
+                        @if($package->special_info!=null)
+
+                        <h6 ><b>Special Info :</b>
+                           {{$package->special_info}}
+                        </h6>
+
+                        <h6 ><b>Note :</b>
+                           {{$package->note}}
+
+                        @else
+
+                        <!-- <h6>Special Info : -
+                           {{$package->info}}
+                        </h6> -->
+
+                        
+
+                        <h6>Note :
                            {{$package->note}}
                         </h6>
+
+                        @endif
 
                         <!-- <a href="" class="btn btn-primary">Add to Cart</a> -->
                         <form action="{{url('add_cart',$package->id)}}" method="Post">
                               @csrf
-                              <div class="col-md-4">
+                              <div class="col-md-4" style="padding-top:20px">
                               <input type="submit" value="Register">
                               </div> 
                            </form>
