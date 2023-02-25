@@ -53,7 +53,15 @@ class HomeController extends Controller
            $cart->title=$package->title;
            $cart->package_id=$package->id;
            $cart->image=$package->image;
-           $cart->price=$package->price;
+           if($package->discount_price!=null){
+
+            $cart->price=$package->discount_price;
+
+           }
+           else{
+            $cart->price=$package->price;
+           }
+           
 
 
            $cart->save();

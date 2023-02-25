@@ -101,8 +101,6 @@
                            {{$package->info}}
                         </h6> -->
 
-                        
-
                         <h6>Note :
                            {{$package->note}}
                         </h6>

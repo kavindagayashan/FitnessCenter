@@ -26,16 +26,25 @@
                 margin:auto;
                 width:50%;
                 text-align:center;
-                padding:100px;
+                padding:30px;
             }
 
-            table,th,td{
+            /* table,th,td{
                 border:1px solid grey;
-            }
+            } */
 
             th{
-                font-size:30px;
-                paddin: 5px;
+                font-size:25px;
+                padding: 10px;
+            }
+
+            .totalprice{
+                padding:40px;
+                
+            }
+
+            .hide{
+                color:white;
             }
 
       </style>
@@ -47,15 +56,16 @@
       @include('home.header')
          <!-- end header section -->
       
-      
-     
-      <div class="center">
+         <div class="center">
         <table>
             <tr>
                 <th>Title</th>
                 <th>Package ID</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th class="hide"></th>
                 <th>Action</th>
-                <!-- <th></th> -->
+                
             </tr>
 
             <?php $totalprice=0;    ?>
@@ -64,15 +74,35 @@
             <tr>
                 <td>{{$cart->title}}</td>
                 <td>{{$cart->package_id}}</td>
+                <td>Rs: {{$cart->price}}</td>
+                <td><img class="img_src" src="/package/{{$cart->image}}"></td>
+                <td></td>
                 <td><a class="btn btn-danger" onclick="return confirm('Are you sure to remove your selected package?')" href="{{url('/remove_cart',$cart->id)}}">Remove</a></td>
 
             </tr>
 
-           
+            <?php $totalprice = $totalprice + $cart->price ?>
 
                 @endforeach
+
+                
         </table>
+
+        <div>
+
+            <p class="totalprice"><b> Package Total :</b> Rs: {{$totalprice}}</p>
+       
+        </div>
+
+        <div>
+            <p style="font-size:25px; paddin-bottom: 15px"><b>Proceed</p>
+            <a href="" class="btn btn-danger">Pay Using Card</a>
+        </div>
+        
+
       </div>
+     
+      
 
       <!-- footer start -->
       
