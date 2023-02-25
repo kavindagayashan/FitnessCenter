@@ -12,6 +12,8 @@ use App\Models\Package;
 
 use App\Models\Cart;
 
+use App\Models\Payment;
+
 use Session;
 use Stripe;
 
@@ -118,6 +120,34 @@ class HomeController extends Controller
                 "source" => $request->stripeToken,
                 "description" => "Thanks for payment" 
         ]);
+
+        $user=Auth::user();
+
+        $userid = $user->id;
+
+        $data=cart::where('user_id','=',$userid)->get();
+
+        foreach($data as $data)
+        {
+
+            $payment = new payment;
+
+            $payment->name=$data->name;
+            $payment->email=$data->email;
+            $payment->user_id=$data->user_id;
+            $payment->title=$data->title;
+            $payment->package_id=$data->package_id;
+            $payment->price=$data->price;
+            $payment->image=$data->image;
+            $payment->payment_status="Paid";
+
+            $payment->save();
+
+            $cart_id=$data->id;
+            $cart=cart::find($cart_id);
+            $cart->delete();
+
+        }
       
         Session::flash('success', 'Payment successful!');
               
