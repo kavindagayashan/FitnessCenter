@@ -28,8 +28,23 @@ class HomeController extends Controller
         $usertype=Auth::user()->usertype;
 
         if($usertype == '1'){
+            
+            $total_packages=package::all()->count();
 
-            return view('admin.home');
+            $total_user=user::all()->count();
+
+            $payment=payment::all();
+
+            $total_revenue=0;
+
+            foreach($payment as $payment){
+
+                $total_revenue = $total_revenue + $payment->price;
+            }
+
+            $join=user::where('created_at','LIKE','2022-12-%% %%:%%:%%')->get()->count();
+
+            return view('admin.home', compact('total_packages','total_user','total_revenue','join'));
         }
 
         else{

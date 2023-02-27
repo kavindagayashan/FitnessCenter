@@ -29,7 +29,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">250,000</h3>
+                          <h3 class="mb-0">Rs: {{$total_revenue}}</h3>
                           <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
                         </div>
                       </div>
@@ -49,7 +49,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">125</h3>
+                          <h3 class="mb-0">{{$total_user}}</h3>
                           <p class="text-success ml-2 mb-0 font-weight-medium"></p>
                         </div>
                       </div>
@@ -69,7 +69,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">12</h3>
+                          <h3 class="mb-0">{{$join}}</h3>
                           <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
                         </div>
                       </div>
@@ -89,7 +89,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">10</h3>
+                          <h3 class="mb-0">{{$total_packages}}</h3>
                           <p class="text-success ml-2 mb-0 font-weight-medium"></p>
                         </div>
                       </div>
